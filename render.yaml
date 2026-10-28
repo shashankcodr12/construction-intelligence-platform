@@ -1,0 +1,18 @@
+services:
+  # Option 1: Unified Full-Stack Service (Frontend + Backend on 1 Free Render URL)
+  - type: web
+    name: construction-intelligence-platform
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "cd frontend && npm install && npm run build && cd ../backend && pip install -r requirements.txt"
+    startCommand: "cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-2.0-flash
+      - key: ALLOWED_ORIGINS
+        value: "*"
