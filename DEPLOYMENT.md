@@ -158,3 +158,4 @@ When submitting your assignment or project, include:
    - 📅 **Planning**: Generate multi-phase construction schedules and risk registers.
    - 🌤️ **Daily Site Assistant**: View live weather advisories for concrete pouring, painting, and cranes.
    - 💬 **Code Assistant**: Query Indian Standards (IS 456, IS 800, NBC 2016).
+
